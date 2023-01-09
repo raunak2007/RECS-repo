@@ -1,37 +1,36 @@
-## Family Night
-> Each evening family will meet.  Family nights are intended to build the Leuck family legacy.
+## The Empire State Building
 
-### Leuck Greet
-> Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
-- Start with Movie
-- Transition to games
-- Mom and Pop welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
+### Background
 
-Trivia, which one is Frank and Judith?  who are the others?
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/sherwood_glena.jpg" alt="Field" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/frank_judith.jpg" alt="Bocce" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/norville_erma.jpg" alt="Pool" style="width:100%">
-  </div>
-</div>
+In the center of New York City, there is a famous skyscraper called the Empire State Building. It is a magnificent 1,454 feet tall and was finished in 1931. It was the tallest structure when it was first finished, and it kept that title for almost 40 years! It's still among the tallest structures in the country today.
 
-### Tuesday Family Night
-> Family History night.  What better way to unite in reunion spirit then talk about us, explore our similarities and get excited about our differences.  A night of stories on how we all came together as Leuck's, plus some games on our similarities and differences.
-- Learn the "Leuck Song"
-- Kick off with some games to look at our similarities and differences.
-- Originals, plan 5 minute story and introduction on you and your clan.   Props and acting encouraged with your stories.  Stick to the 5 minute time line.
-- Frank and Judith love story
-- Encores and requests
-- Family prayer, 'Leuck style'
+### Architecture  
 
-### Wednesday Family Night
+Art Deco, a design style popular in the 1930s, was used to construct the Empire State Building. It has setbacks in its peculiar stepped-back design, giving it a flat top, on the 86th, 77th, and 63rd floors. The 102-story building is clad in limestone and aluminum. Eagles, sunbursts, and geometric patterns are among the decorative highlights on the building that are all uniquely Art Deco in style. The lobby stands out in especially with its marble walls, brass elevator doors, and stunning artwork. 
 
-### Thursday Family Night
+One of the Empire State Building's most well-known features is its observatories, which are located on the 86th and 102nd floors, respectively. From these observatories, visitors may take in breathtaking panoramic views of the city. The building is also famous because of it's unique lights that can be changed for different occasions
 
-### Friday Family Night
+### Events
+Notable events include:
+
+- The building's debut on May 1, 1931. President Herbert Hoover was there for the occasion, and he gave the facility its official opening by radio address from the White House. 
+
+- The yearly New Year's Eve party, which has taken place in the structure since the 1950s. To signal the beginning of a new year, a huge ball is lowered down the side of the structure each year. 
+
+- The Empire State Building has appeared on many television programmes. Additionally, the structure has served as the backdrop for a number of photo sessions and music videos.
+
+- Numerous special occasions, such as weddings and business gatherings, have been held at the observatories on the 86th and 102nd floors. The observatories are a popular option for such occasions because of the views they provide. 
+
+- The structure has also served as a venue for a number of charitable activities, such as the yearly Empire State Building Run-Up, which raises money for a number of charities. 
+
+- The structure has also played host to a number of political demonstrations, including a march for immigrant rights in 2006 and a protest against the Iraq War in 2003.
+
+### Conclusion
+
+One of New York City's most recognizable landmarks and symbols, the Empire State Building is a global icon. When it was finished in 1931, it was the highest structure in the world, and it held that title for nearly 40 years. It continues to be among the tallest structures in the country. 
+
+Millions of tourists from all around the world have visited the Empire State Building, which is a well-known tourist destination. Visitors to New York must visit its observatories, which are located on the 86th and 102nd floors and provide panoramic views of the city. The lights on the structure are another well-liked element; the colors are altered to coincide with different occasions and holidays. 
+
+The Empire State Building is a massive architectural achievement in addition to being an important tourist destination. It was made in the 1930s and is a well-known illustration of the Art Deco design movement. It was made possible to create such a tall skyscraper because to the building's ground-breaking steel frame and sophisticated elevator technology. 
+
+Overall, the Empire State Building is a treasured monument and popular tourist destination because it has played a significant role in New York City's history and culture.
