@@ -1,4 +1,4 @@
-## Chrysler Building
+## [Chrysler Building](https://chryslerbuilding.com/history/)
 
 ### Background
 ![]({{site.baseurl}}/images/chrysler.jpg)
@@ -12,8 +12,14 @@ Located in the East Side of Manhattan in New York, the Chrysler Building is a ve
 
  The Chrysler Building is known for its design and is often called the epitome of the Art Deco skyscraper. The building also has a theme of the sun and particularly the sunburst pattern on the crown. Many movies were actually filmed at the Chrysler Building 
 
-### Tuesday Breakfast (8-9:30am)
-> Grits and Sausage Links in the main hall
+### Events
+- The Chrysler Building began in 1928, when automotive titan Walter P. Chrysler, founder of Chrysler Corporation
+- William Van Alen, who had previously designed a skyscraper for Reynolds on the site, to create the world’s tallest tower
+- The Chrysler Building surpassed the Woolworth Building and 40 Wall Street in Lower Manhattan in a “Race to the Sky” to claim the tallest building in the world title it held until 1931
+- It is the tallest brick building in the world with a steel framework
+- It was the world's tallest building for 11 months after its completion in 1930
+- The Chrysler Building has 77 floors, soaring 1048 feet high in Midtown East
+- This building contains 29961 tons of steel and 3,826,000 bricks, as well as nearly 5,000 windows
 
-### Tuesday Lunch
-> Make lunch at dinning room.  Pack and Go.  Eat outside or at your housing, pick up trash and leave no mess in dinning hall or grounds.
+### Conclusion
+This building is a very famous buildings and can be seen in many famous movies. While this building may not be the most tallest building, it is widely recognized and is very famous
