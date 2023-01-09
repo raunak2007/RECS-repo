@@ -12,7 +12,7 @@ Located in the East Side of Manhattan in New York, the Chrysler Building is a ve
 
  The Chrysler Building is known for its design and is often called the epitome of the Art Deco skyscraper. The building also has a theme of the sun and particularly the sunburst pattern on the crown. Many movies were actually filmed at the Chrysler Building 
 
-### Events
+### Events/Facts
 - The Chrysler Building began in 1928, when automotive titan Walter P. Chrysler, founder of Chrysler Corporation
 - William Van Alen, who had previously designed a skyscraper for Reynolds on the site, to create the world’s tallest tower
 - The Chrysler Building surpassed the Woolworth Building and 40 Wall Street in Lower Manhattan in a “Race to the Sky” to claim the tallest building in the world title it held until 1931
