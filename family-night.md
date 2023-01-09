@@ -24,7 +24,7 @@ One of the Empire State Building's most well-known features is its observatories
 
 - The structure has also played host to a number of political demonstrations, including a march for immigrant rights in 2006 and a protest against the Iraq War in 2003.
 
-### Fact game
+### Random facts
 <button onclick="getFact()">Get a Fact</button>
 <button onclick="getAllFacts()">Get all Facts</button>
 <br>
