@@ -34,3 +34,22 @@ Millions of tourists from all around the world have visited the Empire State Bui
 The Empire State Building is a massive architectural achievement in addition to being an important tourist destination. It was made in the 1930s and is a well-known illustration of the Art Deco design movement. It was made possible to create such a tall skyscraper because to the building's ground-breaking steel frame and sophisticated elevator technology. 
 
 Overall, the Empire State Building is a treasured monument and popular tourist destination because it has played a significant role in New York City's history and culture.
+
+<head><link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'></head>
+<style>
+    body {
+        font-family: Oxygen, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: aqua;
+    }
+
+    p, span, div {
+        color: white;
+    }
+
+    img {
+        border: 2px solid aqua;
+    }
+</style>
