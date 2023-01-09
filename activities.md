@@ -1,5 +1,7 @@
 # Eiffel Tower
 
+![]({{site.baseurl}}/images/EiffelTower.png)
+
 - The Eiffel Tower is both a tower and a landmark
 - The Eiffel tower was created by an engineer named Gustave Eiffel
 - The tower was originally created for the International Exposition of 1889 to celebrate the centenary of the French Revolution
