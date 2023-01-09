@@ -22,4 +22,4 @@ Located in the East Side of Manhattan in New York, the Chrysler Building is a ve
 - This building contains 29961 tons of steel and 3,826,000 bricks, as well as nearly 5,000 windows
 
 ### Conclusion
-This building is a very famous buildings and can be seen in many famous movies. While this building may not be the most tallest building, it is widely recognized and is very famous
+This building is a very famous buildings and can be seen in many famous movies. While this building may not be the most tallest building, it is widely recognized.
