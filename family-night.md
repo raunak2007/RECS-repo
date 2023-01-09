@@ -24,6 +24,56 @@ One of the Empire State Building's most well-known features is its observatories
 
 - The structure has also played host to a number of political demonstrations, including a march for immigrant rights in 2006 and a protest against the Iraq War in 2003.
 
+### Fact game
+<button onclick="getFact()">Get a Fact</button>
+<button onclick="getAllFacts()">Get all Facts</button>
+<br>
+<br>
+<textarea id="factBox" rows="4" cols="50"></textarea>
+
+<script>
+  function getFact() {
+    const facts = [
+      "The Empire State Building is 1,454 feet tall.",
+      "The Empire State Building has 103 floors.",
+      "The Empire State Building was completed in 1931.",
+      "The Empire State Building was the tallest building in the world until 1970.",
+      "The Empire State Building has its own ZIP code: 10118.",
+      "The Empire State Building has an observatory on the 86th floor, which offers panoramic views of the city.",
+      "The Empire State Building is lit up at night with different colored lights to celebrate holidays and special events.",
+      "The Empire State Building was designed in the Art Deco style, which was popular in the 1920s and 1930s.",
+      "The Empire State Building is made of steel and concrete and has 6,514 windows."
+    ];
+
+    // Get a random fact
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+
+    // Update the text box with the fact
+    document.getElementById("factBox").value = fact;
+  }
+
+  function getAllFacts() {
+    const facts = [
+      "The Empire State Building is 1,454 feet tall.",
+      "The Empire State Building has 103 floors.",
+      "The Empire State Building was completed in 1931.",
+      "The Empire State Building was the tallest building in the world until 1970.",
+      "The Empire State Building has its own ZIP code: 10118.",
+      "The Empire State Building has an observatory on the 86th floor, which offers panoramic views of the city.",
+      "The Empire State Building is lit up at night with different colored lights to celebrate holidays and special events.",
+      "The Empire State Building was designed in the Art Deco style, which was popular in the 1920s and 1930s.",
+      "The Empire State Building is made of steel and concrete and has 6,514 windows."
+    ];
+
+    // Join all the facts into a single string
+    const allFacts = facts.join("\n");
+
+    // Update the text box with all the facts
+    document.getElementById("factBox").value = allFacts;
+  }
+</script>
+
+
 ### Conclusion
 
 One of New York City's most recognizable landmarks and symbols, the Empire State Building is a global icon. When it was finished in 1931, it was the highest structure in the world, and it held that title for nearly 40 years. It continues to be among the tallest structures in the country. 
