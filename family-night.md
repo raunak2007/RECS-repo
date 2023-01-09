@@ -1,21 +1,20 @@
 ## The Empire State Building
-![]({{site.baseurl}}/images/sdhauhduiahusi.jpeg)
-### Background
 
-In the center of New York City, there is a famous skyscraper called the Empire State Building. It is a magnificent 1,454 feet tall and was finished in 1931. It was the tallest structure when it was first finished, and it kept that title for almost 40 years! It's still among the tallest structures in the country today.
+### Background
+![]({{site.baseurl}}/images/sdhauhduiahusi.jpeg)
+<br>In the center of New York City, there is a famous skyscraper called the Empire State Building. It is a magnificent 1,454 feet tall and was finished in 1931. It was the tallest structure when it was first finished, and it kept that title for almost 40 years! It's still among the tallest structures in the country today.
 
 ### Architecture  
+![]({{site.baseurl}}/images/empireArchi.jpeg)
 
 Art Deco, a design style popular in the 1930s, was used to construct the Empire State Building. It has setbacks in its peculiar stepped-back design, giving it a flat top, on the 86th, 77th, and 63rd floors. The 102-story building is clad in limestone and aluminum. Eagles, sunbursts, and geometric patterns are among the decorative highlights on the building that are all uniquely Art Deco in style. The lobby stands out in especially with its marble walls, brass elevator doors, and stunning artwork. 
 
 One of the Empire State Building's most well-known features is its observatories, which are located on the 86th and 102nd floors, respectively. From these observatories, visitors may take in breathtaking panoramic views of the city. The building is also famous because of it's unique lights that can be changed for different occasions
 
 ### Events
-Notable events include:
+![]({{site.baseurl}}/images/nye-2022-with-views-of-empire-state-building-new-york-30-west-30th-street.jpeg)
 
 - The building's debut on May 1, 1931. President Herbert Hoover was there for the occasion, and he gave the facility its official opening by radio address from the White House. 
-
-- The yearly New Year's Eve party, which has taken place in the structure since the 1950s. To signal the beginning of a new year, a huge ball is lowered down the side of the structure each year. 
 
 - The Empire State Building has appeared on many television programmes. Additionally, the structure has served as the backdrop for a number of photo sessions and music videos.
 
