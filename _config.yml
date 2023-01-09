@@ -2,7 +2,7 @@ theme: jekyll-theme-midnight
 title: "RECS Project"
 description: "Blog about architecture."
 gitorg: "https://github.com/jm1021/leuck_reunion"
-description: "By: Sachit, Raunak, Edwin, and Colin"
+description: "By: Raunak, Edwin, Colin, and Sachit"
 google_analytics:
 
 remote_theme: pages-themes/midnight@v0.2.0
