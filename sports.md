@@ -24,7 +24,32 @@ The Burj Khalifa is an iconic skyscraper located in Dubai, United Arab Emirates.
 - Burj Khalifa is home to a number of luxury hotels, apartments, and office spaces.
 <textarea id="factBox" rows="4" cols="50"></textarea>
 
-<script> function getFact() { const facts = [ "Burj Khalifa is the tallest building in the world, standing at 828 meters (2,722 feet).", "It is located in Dubai, United Arab Emirates.", "The building was designed by the architectural firm SOM (Skidmore, Owings & Merrill).", "Construction of Burj Khalifa began in 2004 and was completed in 2010.", "The building has a total of 163 floors.", "Burj Khalifa has the highest occupied floor in the world, the highest outdoor observation deck in the world, and the highest restaurant in the world.", "The building's design is inspired by the hymenocallis, a type of desert flower.", "Burj Khalifa is made up of more than 330,000 cubic meters of concrete, 39,000 tons of steel rebar, and 22 million man-hours of labor.", "The building's exterior is clad in more than 26,000 glass panels." ];  const fact = facts[Math.floor(Math.random() * facts.length)];  document.getElementById("factBox").value = fact; } function getAllFacts() { const facts = [ "Burj Khalifa is the tallest building in the world, standing at 828 meters (2,722 feet).", "It is located in Dubai, United Arab Emirates.", "The building was designed by the architectural firm SOM (Skidmore, Owings & Merrill).", "Construction of Burj Khalifa began in 2004 and was completed in 2010.", "The building has a total of 163 floors.", "Burj Khalifa has the highest occupied floor in the world, the highest outdoor observation deck in the world, and the highest restaurant in the world.", "The building's design is inspired by the hymenocallis, a type of desert flower.", "Burj Khalifa is made up of more than 330,000 cubic meters of concrete, 39,000 tons of steel rebar, and 22 million man-hours of labor.", "The building's exterior is clad in more than 26,000 glass panels." ]; const allFacts = facts.join("\n"); document.getElementById("factBox").value = allFacts; } </script>
+<script> 
+  function getFact() { 
+  const facts = [ "Burj Khalifa is the tallest building in the world, standing at 828 meters (2,722 feet).", 
+  "It is located in Dubai, United Arab Emirates.", 
+  "The building was designed by the architectural firm SOM (Skidmore, Owings & Merrill).", 
+  "Construction of Burj Khalifa began in 2004 and was completed in 2010.", 
+  "The building has a total of 163 floors.", 
+  "Burj Khalifa has the highest occupied floor in the world, the highest outdoor observation deck in the world, and the highest restaurant in the world.",
+  "The building's design is inspired by the hymenocallis, a type of desert flower.", 
+  "Burj Khalifa is made up of more than 330,000 cubic meters of concrete, 39,000 tons of steel rebar, and 22 million man-hours of labor.", 
+  "The building's exterior is clad in more than 26,000 glass panels." ];  
+  const fact = facts[Math.floor(Math.random() * facts.length)];  
+  document.getElementById("factBox").value = fact; } 
+function getAllFacts() { 
+  const facts = [ "Burj Khalifa is the tallest building in the world, standing at 828 meters (2,722 feet).", 
+  "It is located in Dubai, United Arab Emirates.", 
+  "The building was designed by the architectural firm SOM (Skidmore, Owings & Merrill).", 
+  "Construction of Burj Khalifa began in 2004 and was completed in 2010.", 
+  "The building has a total of 163 floors.", 
+  "Burj Khalifa has the highest occupied floor in the world, the highest outdoor observation deck in the world, and the highest restaurant in the world.",
+  "The building's design is inspired by the hymenocallis, a type of desert flower.", 
+  "Burj Khalifa is made up of more than 330,000 cubic meters of concrete, 39,000 tons of steel rebar, and 22 million man-hours of labor.", 
+  "The building's exterior is clad in more than 26,000 glass panels." ]; 
+  const allFacts = facts.join("\n"); 
+  document.getElementById("factBox").value = allFacts; } 
+</script>
 
 
 ### Conclusion
