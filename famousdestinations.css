@@ -4,10 +4,10 @@
   }
   
 .col {
-    padding: 20px;
-    border: 1px solid gray;
-    margin: 5px;
-    order: 3;
+  padding: 20px;
+  border: 1px solid gray;
+  margin: 5px;
+  order: 3;
   }
 span{
     float: right;
@@ -15,3 +15,86 @@ span{
     font-size: 11px;
 }
   
+h1 {
+  font-family: "Oxygen", sans-serif;
+  font-size: 40px;
+}
+/* Containers */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 16px;
+  padding: 20px;
+  border: 1px solid gray;
+  margin: 5px;
+  order: 3;
+}
+
+.image-column {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.img-cropped {
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%; /* aspect ratio */
+  background-size: cover;
+  background-position: top;
+}
+
+.img-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.img-button1 {
+  background-image: url(images/like.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin: 5px;
+}
+.img-button2 {
+  background-image: url(images/dislike.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin: 5px;
+}
+
+.text-column {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px;
+}
+
+.text-subtitle {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: "Oxygen", sans-serif;
+}
+
+.text-description {
+  font-size: 20px;
+  color: #666;
+  font-family: "Oxygen", sans-serif;
+}
