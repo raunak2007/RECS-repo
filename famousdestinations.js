@@ -64,21 +64,19 @@ $(document).ready(function() {
       url: "https://api.openai.com/v1/images/generations",
       type: "post",
       headers: {
-        "Authorization": "Bearer KEYGOESHERE"
+        "Authorization": "Bearer CODECODECODE"
       },
       data: JSON.stringify({
         "model": "image-alpha-001",
-        "prompt": title,
+        "prompt": "Apple",
         "num_images":1,
         "size":"1024x1024"
       }),
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       success: function(data) {
-        window.alert("test")
         $(".img-cropped").last().css("background-image", "url(" + data.data[0].url + ")");
       }
     });
   });
 });
-
