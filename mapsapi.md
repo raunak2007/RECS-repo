@@ -55,5 +55,21 @@
 </div>
 </html>
 <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Chrysler Building
+  const chrysler = { lat: 40.75157, lng: -73.97528 };
+  // The map, centered at Chrysler Building
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: chrysler,
+  });
+  // The marker, positioned at Chrysler Building, New York
+  const marker = new google.maps.Marker({
+    position: chrysler,
+    map: map,
+  });
+}
+window.initMap = initMap;
 
 </script>
