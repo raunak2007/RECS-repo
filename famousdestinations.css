@@ -136,6 +136,16 @@ button:hover {
   border: none;
   margin: 5px;
 }
+.report-button {
+  background-image: url(images/report.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  border: none;
+  margin: 5px;
+}
 
 .text-column {
   width: 85%;

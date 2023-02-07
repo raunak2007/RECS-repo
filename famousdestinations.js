@@ -43,6 +43,7 @@ $(document).ready(function() {
             '<div class="like-button"></div>' +
             '<div class="dislike-button"></div>' +
             '<div class="text-likes">' + likes + ' Likes</div>' +
+            '<div class="report-button"></div>' +
           '</div>' +
         '</div>' +
         '<div class="text-column">' +
