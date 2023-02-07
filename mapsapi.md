@@ -10,7 +10,7 @@
     iframe {
         width: 90%;
         height: fixed;
-        filter: invert(75%);
+        filter: invert(50%);
     }
 </style>
 <html>
