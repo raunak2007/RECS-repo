@@ -14,6 +14,7 @@
     }
 </style>
 <html>
+<input type="text">
 <!---Please add city as a h1, and change the name of the building is made as a h2--->
 <div class = "California">
 </div>
