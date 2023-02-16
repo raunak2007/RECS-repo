@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Length</title>
+	<script>
+		function showLength() {
+      let landmark=["Burj Khalifa","Eiffel Tower","Statue of Liberty","Taj Mahal"]
+      let airport=["Dubai International Airport","Paris International Airport","Newark International Airport","Agra International Airport"]
+			var input = document.getElementById("input").value;
+			var length = airport[landmark.indexOf(input)]
+			document.getElementById("result").innerHTML = "Airport is " + length;
+		}
+	</script>
+</head>
+<body>
+	<label for="input">Enter a landmark:</label>
+	<input type="text" id="input">
+	<button onclick="showLength()">Show Airport</button>
+	<p id="result"></p>
+</body>
+</html>
