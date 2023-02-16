@@ -1,4 +1,7 @@
 <style>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
     /*Make sure to make maps centered to h2, but can make h1 left indent*/
     h1 {
         color: blue;
@@ -12,8 +15,10 @@
         height: fixed;
         filter: invert(50%);
     }
+  </head>
 </style>
 <html>
+<body>
 <input type="text">
 <!---Please add city as a h1, and change the name of the building is made as a h2--->
 <div class = "California">
@@ -54,23 +59,40 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.452658115783!2d77.09776911430126!3d28.556167094285602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b85fc2a2d89%3A0xbef376182c43ed9d!2sIndira%20Gandhi%20International%20Airport!5e0!3m2!1sen!2sus!4v1675712957805!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
+
+<form autocomplete="off" id="form" method = "POST" action = "https://agenda.nighthawkcodescrums.gq/calendar-api/events/add">
+
+<form autocomplete="off" id="form" method = "POST" action = "https://farmersflask.duckdns.org/api/mapsapi">
+  <input class="first" type="text" name="month" placeholder="Second Airport" required>
+  <input class="second" type="text" name="day" placeholder="First Aiport" required>
+
 </html>
 <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Chrysler Building
-  const chrysler = { lat: 40.75157, lng: -73.97528 };
-  // The map, centered at Chrysler Building
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: chrysler,
-  });
-  // The marker, positioned at Chrysler Building, New York
-  const marker = new google.maps.Marker({
-    position: chrysler,
-    map: map,
-  });
-}
-window.initMap = initMap;
-
+  const url = "https://farmersflaskduckdns.org/api/maps";
+  //Options
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors',
+    cache: 'default', // *default, no-cache, reload, force-cache only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+    },
+};
+// Fetch
+fetch(url, options)
+  .then(response => {
+    if (response.status !==200) {
+      error('GET API response failure: ' + response.status);
+      return;
+    }
+    response.json().then(data => {
+      for(const event of data) {
+        document.getElementbyId(event.day+2).innerHTML = eventTitle
+      }
+    })
+  })
+.catch(err => {
+  error(err + " " + url);
+});
 </script>
