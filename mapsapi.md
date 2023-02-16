@@ -71,9 +71,9 @@
   const url = "https://farmersflaskduckdns.org/api/maps";
   //Options
   const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    method: 'GET', // *GET, POST, PUT, DELETE
     mode: 'cors',
-    cache: 'default', // *default, no-cache, reload, force-cache only-if-cached
+    cache: 'default',
     credentials: 'omit', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json'
