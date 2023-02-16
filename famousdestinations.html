@@ -1,4 +1,19 @@
-<table>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Length</title>
+	<script>
+		function showLength() {
+      let landmark=["Burj Khalifa","Eiffel Tower","Statue of Liberty","Taj Mahal"]
+      let airport=["Dubai International Airport","Paris International Airport","Newark International Airport","Agra International Airport"]
+			var input = document.getElementById("input").value;
+			var length = airport[landmark.indexOf(input)]
+			document.getElementById("result").innerHTML = "Airport is " + length;
+		}
+	</script>
+</head>
+<body>
+  <table>
   <tr>
       <td><a class="link" href="/">Home</a></td>
       <td><a class="link" href="https://raunak2007.github.io/RECS-repo/mapsapi">Google Maps Locations</a></td>
@@ -8,61 +23,9 @@
       <td><a class="link" href="/nearest-airport">Nearest Airport Finder</a></td>
   </tr>
 </table>
-
-<h1>Destinations around the world - Colin Feature<h1>
-
-<head>
-    <link rel="stylesheet" href="famousdestinations.css">
-</head>
-<body>
-    <h2>Create a Post</h2>
-    <form id="post-form">
-      <h4>Title</h4>
-      <textarea id="post-title" class="textarea-title"></textarea> 
-      <h4>Text Content</h4>
-      <textarea id="post-text" class="textarea-text"></textarea> <br>
-      <button type="submit">Add Post</button>
-    </form>
-    <h2>Posts</h2>
-    <div id="posts"></div>
-
-    <h1>Testing area</h1>
-    
-  
-    <div class="row">
-        <div class="col" data-value="1" data-likes="2">
-          one
-          <span>Likes: 2</span>
-        </div>
-        <div class="col" data-value="3" data-likes="10">
-          three
-          <span>Likes: 10</span>
-        </div>
-        <div class="col" data-value="5" data-likes="1">
-          five
-          <span>Likes: 1</span>
-        </div>
-        <div class="col" data-value="200" data-likes="102">
-          two hundred
-          <span>Likes: 102</span>
-        </div>
-        <div class="col" data-value="4" data-likes="232">
-          four
-          <span>Likes: 232</span>
-        </div>
-        <div class="col" data-value="2" data-likes="12">
-          two
-          <span>Likes: 12</span>
-        </div>
-        <div class="col" data-value="400" data-likes="24">
-          four hundred
-          <span>Likes: 24</span>
-        </div>
-      </div>
-      
-      <div i="button-group">
-        <button class="order" id="decName" data-order="descendingByLikes">Test Button</button>
-      </div>   
-      
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="famousdestinations.js"></script>
+	<label for="input">Enter a landmark:</label>
+	<input type="text" id="input">
+	<button onclick="showLength()">Show Airport</button>
+	<p id="result"></p>
+</body>
+</html>
