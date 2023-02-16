@@ -30,7 +30,8 @@ $(document).ready(function() {
   }
 
   function getPosts() {
-    var url = "http://127.0.0.1:8012/api/fd";
+    //var url = "http://127.0.0.1:8012/api/fd";
+    var url = "https://farmersflask.duckdns.org/api/fd";
     let request = new XMLHttpRequest();
     request.open("GET", url);
     request.send();
@@ -75,7 +76,8 @@ $(document).ready(function() {
         var imageURL = data.data[0].url;*/
 
         // Send all data
-  var url = "http://127.0.0.1:8012/api/fd/post";
+  //var url = "http://127.0.0.1:8012/api/fd/post";
+  var url = "https://farmersflask.duckdns.org/api/fd/post";
   fetch(url, {
     method: "POST",
     headers: {

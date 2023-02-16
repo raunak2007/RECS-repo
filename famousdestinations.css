@@ -19,8 +19,12 @@ form {
   margin: 5px;
 }
 
+
 body {
   background-color: rgb(30, 30, 30);
+}
+.link {
+  color: rgb(94, 147, 240);
 }
 h1 {
   font-family: "Oxygen", sans-serif;
