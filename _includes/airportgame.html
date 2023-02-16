@@ -1,0 +1,211 @@
+<html>
+<head>
+<style>
+.button {
+  background-color: #d1d3d1; /* Green */
+  border: black;
+  color: rgb(180, 28, 28);
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+h6 {
+  font-size: 200%;
+}
+input {
+  width: 40%;
+  height: 5%;
+  border: 2px solid rgb(179, 21, 21);
+  border-radius: 4px;
+  background-color: #d1d3d1
+}
+</style>
+</head>
+<body>
+<p><button class = 'button' onclick="generate(this)">Play Now!</button></p>
+<h6>
+<p id="*"> </p>
+<p id="**"> </p>
+<br>
+<p id="***"> </p>
+<br>
+</h6>
+<form id = "countries">
+
+</form>
+<p id="****"> </p>
+<p id="*****"> </p>
+<script language = "JavaScript">
+  var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas, The", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic of the", "Congo, Republic of the", "Costa Rica", "Côte d’Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia, The", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Sudan, South", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"]
+  var guessed = [];
+  var myletter = "*";
+  var numcountries = 0;
+  var word = "bruh";
+  var inputs = [];
+  var buttons = [];
+  var ps = [];
+  function timer(){
+    document.getElementById("***").style.fontSize = 100;
+    var sec = 5*numcountries;
+    var timer = setInterval(function(){
+        if(sec%60 < 10){
+          document.getElementById('***').innerHTML= Math.floor(sec/60)+":0"+(sec%60);
+        }else{
+          document.getElementById('***').innerHTML= Math.floor(sec/60)+":"+(sec%60);
+        }
+        if(Math.floor(sec/60) < 10){
+          document.getElementById('***').innerHTML= "0"+document.getElementById('***').innerHTML;
+        }
+        sec--;
+        if(sec < 5){
+          document.getElementById('***').style.color = "rgb(255,0,0)";
+        }
+        if (sec < 0) {
+          clearInterval(timer);
+          for(let i = 0; i < buttons.length; i++){
+            document.getElementById(inputs[i].id).readOnly = true;
+            document.getElementById(buttons[i].id).disabled= "disabled";
+          }
+          var goodlist = [];
+          var badlist = [];
+          for(let j = 0; j < countries.length; j++){
+            if(countries[j][0] == myletter){
+              let found = false;
+              for(let k = 0; k < guessed.length; k++){
+                if(countries[j].toLowerCase() == guessed[k].toLowerCase()){
+                  found = true;
+                }
+              }
+              if(found){
+                goodlist.push(countries[j]);
+              }else{
+                badlist.push(countries[j]);
+              }
+            }
+          }
+          let goodstr = "Countries you got right: ";
+          let badstr = "Countries you missed: ";
+          for(let j = 0; j < goodlist.length; j++){
+            goodstr += goodlist[j]+", ";
+          }
+          for(let j = 0; j < badlist.length; j++){
+            badstr += badlist[j]+", ";
+          }
+          if(goodlist.length == 0){
+            goodstr+="None";
+          }
+          if(badlist.length == 0){
+            badstr+="None";
+          }
+          document.getElementById("****").innerHTML = goodstr;
+          document.getElementById("****").style.size = 50;
+          document.getElementById("*****").innerHTML = badstr;
+          document.getElementById("*****").style.size = 50;
+        }
+    }, 1000);
+  }
+  function check(mycountry, id){
+    guessed[id] = mycountry;
+    country = mycountry.toLowerCase();
+    thisletter = myletter.toLowerCase();
+    //document.write(id);
+    if(country[0] == thisletter){
+      var found = false;
+      for(let i = 0; i < countries.length; i++){
+        if(country == countries[i].toLowerCase()){
+          found = true;
+        }
+      }
+      if(found){
+        var newfound = false;
+        for(let i = 0; i < guessed.length; i++){
+          if(country == guessed[i].toLowerCase() && i != id){
+            newfound = true;
+          }
+        }
+        if(!newfound){
+          document.getElementById("feedback"+(id)).innerHTML = "Correct!";
+          document.getElementById("input"+id).style.backgroundColor = "rgb(102,255,0)";
+          //guessed.push(mycountry);
+        }else{
+          document.getElementById("feedback"+(id)).innerHTML = "You already guessed this!";        
+          document.getElementById("input"+id).style.backgroundColor = null;
+          guessed[id] = "*";
+        }
+      }else{
+        document.getElementById("feedback"+(id)).innerHTML = "This isn't a country";
+        document.getElementById("input"+id).style.backgroundColor = null;
+      }
+    }else{
+      document.getElementById("feedback"+(id)).innerHTML = "This doesn't begin with the right letter";
+      document.getElementById("input"+id).style.backgroundColor = null;
+    }
+    return 0;
+  }
+  //import fs from 'fs';
+  function getnum(myletter1){
+//    document.write('Country to Guess begins with : ' + myletter1);
+    //document.write('test input');
+    //document.write('test input DR');
+    //fs.readFile('countries.txt');
+    //document.write('READ COUNTRIES INPUT TEXT FILE\n');
+    //var lines = mydata.split('\n');
+    var ans = 0;
+    for(var i = 0; i < countries.length; i++){
+      if(countries[i][0] == myletter1){
+        ans++;
+      }
+    }
+    return ans;
+  }
+  function generate(elem){
+    let letters = "ABCDEFGHIJKLMNOPQRSTUVYZ";
+    myletter = letters[Math.floor(Math.random()*24)];
+    document.getElementById("*").innerHTML = "Guess every country beginning with " + myletter + "!";
+    numcountries = getnum(myletter);
+    for(let i = 0; i < numcountries; i++){
+      guessed.push("*");
+    }
+    word = " countries";
+    if(numcountries == 1){
+      word = " country";
+    }
+    document.getElementById("**").innerHTML = "You have "+numcountries+word+" to guess!";
+    let z = timer();
+    for(let i = 0; i < numcountries; i++){
+      let input = document.createElement('input');
+      let br = document.createElement("br");
+      let p = document.createElement("p");
+      let butt = document.createElement("button");
+      butt.type = "button";
+      butt.textContent = "Check";
+      input.setAttribute('id',"input"+i);
+      p.setAttribute('id',"feedback"+i);
+      butt.setAttribute('id',"button"+i);
+      //input.value = "bruh";
+      butt.addEventListener('click', function() {
+        //alert(87);
+        let val = document.getElementById("input"+butt.id.substring(6,butt.id.length)).value;
+        let result = check(val,butt.id.substring(6,butt.id.length));
+      });
+      inputs.push(input);
+      buttons.push(butt);
+      ps.push(p);
+      document.getElementById("countries").appendChild(inputs[inputs.length-1]);
+      document.getElementById("countries").appendChild(buttons[buttons.length-1]);
+      document.getElementById("countries").appendChild(ps[ps.length-1]);
+      //document.write("help plz");
+    }
+    //document.write(document.getElementById("input0"));
+    elem.style.display = 'none';
+  }
+</script>
+</body>
+</html>
