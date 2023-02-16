@@ -97,7 +97,7 @@ $(document).ready(function() {
           });
         }
   });
-  
+});
   
   
   
@@ -199,4 +199,4 @@ $(document).ready(function() {
   });*/
   
   /* Api testing */
-  
+})
