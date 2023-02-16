@@ -1,5 +1,0 @@
-# Guess the Country!
-### How to Play
-Our random country generator will give you a random letter, one for each country beginning with that letter. When you click go, you will see a certain amount of spaces to type words into. Within a given amount of time for a countdown, you need to enter each correct country into one box - abbreviations will not be accepted. If a nonexistent country or a country not beginning with the letter is entered, you will be let know of that. You will also know if you have guessed a correct country. You will know the correct answers after the time runs out. Countries are referred to as what most people call them, but in cases where two countries have the same name or a country has the word "The" in front of it, such as "Cool Chinmay", "Bad Chinmay" on "The Chinmay", they should be written as "Chinmay, Cool","Chinmay, Bad", and "Chinmay, The". A single country called "United Lands of Chinmay" would remain the same, without thre changes stated above.
-
-{% include countrygame.html %}
