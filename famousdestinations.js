@@ -56,11 +56,11 @@ $(document).ready(function() {
     var text = $("#post-text").val();
   
     //Get image
-    /*fetch('https://api.openai.com/v1/images/generations', {
+    fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': 'Bearer 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'
       },
       body: JSON.stringify({
         "model": "image-alpha-001",
@@ -73,8 +73,8 @@ $(document).ready(function() {
       .then((response) => response.json())
       .then((data) => {
         // Save the image URL from the API response to the imageURL variable
-        var imageURL = data.data[0].url;*/
-
+        var imageURL = data.data[0].url;
+        window.alert(imageURL);
         // Send all data
   //var url = "http://127.0.0.1:8012/api/fd/post";
   var url = "https://farmersflask.duckdns.org/api/fd/post";
@@ -88,7 +88,7 @@ $(document).ready(function() {
       text: text,
       imageURL: "temp"
     })
-     })
+    })
     .then((response) => response.json())
     }
 });
