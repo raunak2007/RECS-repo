@@ -9,11 +9,13 @@ border: 1px solid gray;
 margin: 5px;
 order: 3;
 }
+
 span{
   float: right;
   color: gray;
   font-size: 11px;
 }
+
 form {
 justify-content: flex-start;
 margin: 5px;
@@ -23,19 +25,24 @@ margin: 5px;
 body {
 background-color: rgb(30, 30, 30);
 }
+
 .link {
 color: rgb(94, 147, 240);
 }
+
 h1 {
 font-family: "Oxygen", sans-serif;
-font-size: 40px;
-color: rgb(94, 147, 240);
+font-size: 50px;
+color: rgb(210, 184, 39);
+text-align: center;
 }
+
 h2 {
 font-family: "Oxygen", sans-serif;
 font-size: 36px;
 color: rgb(94, 147, 240);
 }
+
 h4 {
 font-family: "Oxygen", sans-serif;
 font-size: 32px;
@@ -138,26 +145,6 @@ height: 35px;
 border: none;
 margin: 5px;
 }
-.dislike-button {
-background-image: url(images/dislike.png);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-width: 35px;
-height: 35px;
-border: none;
-margin: 5px;
-}
-.report-button {
-background-image: url(images/report.png);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-width: 35px;
-height: 35px;
-border: none;
-margin: 5px;
-}
 
 .text-column {
 width: 85%;
@@ -179,22 +166,6 @@ color: rgb(94, 147, 240);
 font-size: 20px;
 color: #666;
 font-family: "Oxygen", sans-serif;
-}
-.text-likes {
-font-size: 32px;
-font-family: "Oxygen", sans-serif;
-margin: 5px;
-color:rgb(0, 0, 0);
-}
-
-
-
-.bigimage {
-margin: 50px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
 }
 
 .link1 {
@@ -220,6 +191,7 @@ background-size: cover;
 background-image: url(images/icons2/airport.png);
 background-size: cover;
 }
+
 /* Style for the navigation bar */
 .nav {
 display: flex;
@@ -228,7 +200,6 @@ justify-content: left;
 align-items: center;
 background-color: #f8f8f8;
 border-radius: 8px;
-
 }
 
 .nav a {
