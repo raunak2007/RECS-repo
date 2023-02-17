@@ -62,19 +62,23 @@ border: 1px solid rgb(0, 0, 0);
 transition: transform .2s;
 padding: 8px;
 }
+
 textarea:hover {
 transform: scale(1.005);
 }
+
 .textarea-title {
 width: 50%;
 height: 40px;
 color: rgb(200, 200, 200);
 }
+
 .textarea-text {
 width: 50%;
 height: 140px;
 color: rgb(200, 200, 200);
 }
+
 button {
 resize: none;
 font-family: "Oxygen", sans-serif;
@@ -87,6 +91,7 @@ transition: transform .2s;
 padding: 10px;
 margin: 10px 0px;
 }
+
 button:hover {
 transform: scale(1.025);
 }
@@ -105,6 +110,7 @@ margin: 5px;
 order: 3;
 transition: transform .2s;
 }
+
 .container:hover {
 transform: scale(1.003);
 }
