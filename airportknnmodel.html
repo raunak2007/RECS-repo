@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Length</title>
+	<script>
+		function showLength() {
+      let landmark=["Burj Khalifa","Eiffel Tower","Statue of Liberty","Taj Mahal"]
+      let airport=["Dubai International Airport","Paris International Airport","Newark International Airport","Agra International Airport"]
+			var input = document.getElementById("input").value;
+			var length = airport[landmark.indexOf(input)]
+			document.getElementById("result").innerHTML = "Airport is " + length;
+		}
+	</script>
+</head>
+<body>
+  <table>
+  <tr>
+      <td><a class="link" href="/">Home</a></td>
+      <td><a class="link" href="https://raunak2007.github.io/RECS-repo/mapsapi">Google Maps Locations</a></td>
+      <td><a class="link" href="/airport_knn_model.ipynb">Flight API</a></td>
+      <td><a class="link" href="/RECS-repo/famousdestinations.html">Famous Destinations</a></td>
+      <td><a class="link" href="https://raunak2007.github.io/RECS-repo/airport_knn_model.ipynb">KNN Algorithm</a></td>
+      <td><a class="link" href="/nearest-airport">Nearest Airport Finder</a></td>
+  </tr>
+</table>
+	<label for="input">Enter a landmark:</label>
+	<input type="text" id="input">
+	<button onclick="showLength()">Show Airport</button>
+	<p id="result"></p>
+</body>
+</html>
