@@ -1,1 +1,1 @@
-<img src="icons/logo.png" class="bigimage"> 
+<img src="images/icons2/logo.png" class="bigimage"> 
