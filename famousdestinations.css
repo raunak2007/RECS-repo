@@ -186,3 +186,67 @@ button:hover {
   margin: 5px;
   color:rgb(0, 0, 0);
 }
+
+
+
+.bigimage {
+  margin: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.link1 {
+background-image: url(images/icons2/home.png);
+background-size: cover;
+}
+.link2 {
+  background-image: url(images/icons2/locationMarker.png);
+  background-size: cover;
+}
+
+.link3 {
+  background-image: url(images/icons2/map.png);
+  background-size: cover;
+}
+
+.link4 {
+  background-image: url(images/icons2/building.png);
+  background-size: cover;
+}
+
+.link5 {
+  background-image: url(images/icons2/airport.png);
+  background-size: cover;
+}
+/* Style for the navigation bar */
+.nav {
+  display: flex;
+  background-image: url(images/icons2/header.gif);
+  justify-content: left;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  
+}
+
+.nav a {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  margin: 0 10px;
+  text-indent: -9999px;
+}
+
+/* Style for the links */
+.link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}

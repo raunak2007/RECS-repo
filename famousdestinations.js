@@ -3,7 +3,7 @@ $(document).ready(function() {
   function addPost(post) {
     var likes = post.likes;
     var postHTML = 
-      '<div class="container" id="post-' + post.id + '">' +
+      '<div class="container" id="post-' + post.id + '">' + /*
         '<div class="image-column">' +
           '<div class="img-cropped" id="img-post-' + post.id + '"></div>' +
           '<div class="likes-row">' +
@@ -12,7 +12,7 @@ $(document).ready(function() {
             '<div class="text-likes">' + likes + ' Likes</div>' +
             '<div class="report-button"></div>' +
           '</div>' +
-        '</div>' +
+        '</div>' + */
         '<div class="text-column">' +
           '<div class="text-subtitle">' + post.title + '</div>' +
           '<div class="text-description">' + post.text + '</div>' +
@@ -30,8 +30,7 @@ $(document).ready(function() {
   }
 
   function getPosts() {
-    //var url = "http://127.0.0.1:8012/api/fd";
-    var url = "https://farmersflask.duckdns.org/api/fd";
+    var url = "http://127.0.0.1:8012/api/fd";
     let request = new XMLHttpRequest();
     request.open("GET", url);
     request.send();
@@ -56,11 +55,11 @@ $(document).ready(function() {
     var text = $("#post-text").val();
   
     //Get image
-    fetch('https://api.openai.com/v1/images/generations', {
+    /*fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': 'Bearer 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'
       },
       body: JSON.stringify({
         "model": "image-alpha-001",
@@ -73,11 +72,10 @@ $(document).ready(function() {
       .then((response) => response.json())
       .then((data) => {
         // Save the image URL from the API response to the imageURL variable
-        var imageURL = data.data[0].url;
-        window.alert(imageURL);
+        var imageURL = data.data[0].url;*/
+
         // Send all data
-  //var url = "http://127.0.0.1:8012/api/fd/post";
-  var url = "https://farmersflask.duckdns.org/api/fd/post";
+  var url = "http://127.0.0.1:8012/api/fd/post";
   fetch(url, {
     method: "POST",
     headers: {
@@ -88,9 +86,7 @@ $(document).ready(function() {
       text: text,
       imageURL: "temp"
     })
-    })
+     })
     .then((response) => response.json())
     }
 });
-
-
