@@ -144,7 +144,7 @@ longitude = 0;
 // prepare HTML result container for new output
 const apiUrl = "https://farmersflask.duckdns.org/api/airport";
 
-const create_fetch = apiUrl + '/post';
+// const create_fetch = apiUrl + '/create';
 const read_fetch = apiUrl + '/';
 
 // Code to get city name from user
@@ -270,8 +270,8 @@ function create_entry(){
 // URL for Create API
 // Fetch API call to the database to create a new entry
 //  var url = "http://10.0.0.34:8012/api/airport/";
-  var url2 = "https://farmersflask.duckdns.org/api/airport/post"
-  fetch(url2, requestOptions)
+  var create_fetch = "https://farmersflask.duckdns.org/api/airport/create"
+  fetch(create_fetch, requestOptions)
     .then(response => {
       // trap error response from Web API
       if (response.status !== 200) {
