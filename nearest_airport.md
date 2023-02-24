@@ -70,6 +70,8 @@ const resultContainer = document.getElementById("result");
 const apiUrl = "https://farmersflask.duckdns.org/api/airport";
 const create_fetch = apiUrl + '/create';
 const read_fetch = apiUrl + '/';
+const delete_fetch = apiUrl + '/delete';
+
 
 // Load cities and corresponding airports on page entry fetched from backend database
 read_entries();
@@ -268,6 +270,44 @@ function add_row(data) {
   tr.appendChild(airport1);
 
   resultContainer.appendChild(tr);
+}
+
+
+function delete_entry() {
+  // prepare fetch options
+  const body = {
+      city: cityName
+  };  
+  const delete_options = {
+    method: 'DELETE',
+    mode: 'cors',
+    cache: 'default',
+    credentials: 'omit',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+  // fetch the data from API
+  fetch(delete_fetch, delete_options)
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          const errorMsg = 'Database read error: ' + response.status;
+          console.log(errorMsg);
+          return;
+      }
+      // response contains valid result
+      response.json().then(data => {
+          console.log(data);
+      })
+  })
+  // catch fetch errors (ie ACCESS to server blocked)
+  .catch(err => {
+    console.error(err);
+  });
+  // Update the display with entry deleted
+  read_entries();
 }
 
 </script>
