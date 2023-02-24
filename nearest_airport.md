@@ -17,12 +17,18 @@
         height: fixed;
         filter: invert(50%);
     }
+
+    .button {
+      background-color:blue;
+      border-color:red;
+      color:white;
+    }
+
   </head>
 
 </style>
 
-
-<p>Database API</p>
+<h1 style="text-align:center">Database Entries</h1>
 
 <table>
   <thead>
@@ -36,7 +42,7 @@
   </tbody>
 </table>
 
-<p>Create API</p>
+<h1 style="text-align:center">Create New Entry</h1>
 
 <div id='content'>
 <form id='airportForm'>
@@ -57,18 +63,22 @@
 
 <script type="text/javascript">
 
-latitude = 0;
-longitude = 0;
+// prepare HTML result container for new output
+const resultContainer = document.getElementById("result");
 
 // prepare HTML result container for new output
 const apiUrl = "https://farmersflask.duckdns.org/api/airport";
-// const apiUrl = "http://10.0.0.34:8012/api/airport"
-// const create_fetch = apiUrl + '/create';
+const create_fetch = apiUrl + '/create';
 const read_fetch = apiUrl + '/';
+
+// Load cities and corresponding airports on page entry fetched from backend database
+read_entries();
 
 // Code to get city name from user
 var airport;
 var error=0;
+latitude = 0;
+longitude = 0;
 
 function getAirportName() {
 var cityField = document.getElementById('cityField').value;
@@ -147,7 +157,7 @@ var num = 0
 // airport = airport.slice(num)
 
 // Code to extract airport name and print on the webpage
-            if (latitude != 0){
+            if (error == 0){
                 const textDiv = document.getElementById('text');
             
                 // const p = document.createElement('P');
@@ -167,10 +177,6 @@ var num = 0
 var subButton = document.getElementById('subButton');
 subButton.addEventListener('click', getAirportName, false); 
 
-document.getElementById(airport).innerHTML = 'airportField';
-
-read_entries();
-
 
 // Function to post an entry into the database
 
@@ -178,7 +184,6 @@ function create_entry(cityName, airportName){
   const body = {
       city: cityName,
       airport: airportName
-//      airportField: document.getElementById('airportField').value
   };
   const requestOptions = {
       method: 'POST',
@@ -192,9 +197,8 @@ function create_entry(cityName, airportName){
 
 // URL for Create API
 // Fetch API call to the database to create a new entry
- //  var create_fetch = "http://10.0.0.34:8012/api/airport/create";
-  var create_fetch = "https://farmersflask.duckdns.org/api/airport/create"
-  fetch(create_fetch, requestOptions)
+
+fetch(create_fetch, requestOptions)
     .then(response => {
       // trap error response from Web API
       if (response.status !== 200) {
@@ -250,14 +254,14 @@ function read_entries() {
 function add_row(data) {
   const tr = document.createElement("tr");
   const city1 = document.createElement("td");
-//  const airport1 = document.createElement("td");
+  const airport1 = document.createElement("td");
   // obtain data that is specific to the API
   city1.innerHTML = data.city; 
-//  airport1.innerHTML = data.airport; 
+  airport1.innerHTML = data.airport; 
 
   // add HTML to container
   tr.appendChild(city1);
-//  tr.appendChild(airport1);
+  tr.appendChild(airport1);
 
   resultContainer.appendChild(tr);
 }
