@@ -1,3 +1,5 @@
+<!-- Description : -->
+
 <style>
     <head>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
@@ -16,90 +18,7 @@
         filter: invert(50%);
     }
   </head>
-    /* .bigimage {
-  margin: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
-.link1 {
-background-image: url(images/icons2/home.png);
-background-size: cover;
-}
-.link2 {
-  background-image: url(images/icons2/locationMarker.png);
-  background-size: cover;
-}
-
-.link3 {
-  background-image: url(images/icons2/map.png);
-  background-size: cover;
-}
-
-.link4 {
-  background-image: url(images/icons2/building.png);
-  background-size: cover;
-}
-
-.link5 {
-  background-image: url(images/icons2/airport.png);
-  background-size: cover;
-}
-/* Style for the navigation bar */
-/* .nav {
-  display: flex;
-  background-image: url(images/icons2/header.gif);
-  justify-content: left;
-  align-items: center;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  
-}
-
-.nav a {
-  display: inline-block;
-  width: 75px;
-  height: 75px;
-  background-size: cover;
-  margin: 0 10px;
-  text-indent: -9999px;
-}
-
-/* Style for the links */
-/* .link {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  display: block;
-  padding-top: 10px;
-}  */
-/*     
-    h1 {
-        color: blue;
-        margin-bottom: 60px;
-        font-family; georgia;
-        text-align: center;
-    }
-
-    iframe {
-        width: 90%;
-        height: fixed;
-        filter: invert(75%);
-    }
-
-    .content{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .content>*{
-        padding: 10px;
-    } */
 </style>
 
 
@@ -143,12 +62,13 @@ longitude = 0;
 
 // prepare HTML result container for new output
 const apiUrl = "https://farmersflask.duckdns.org/api/airport";
-
+// const apiUrl = "http://10.0.0.34:8012/api/airport"
 // const create_fetch = apiUrl + '/create';
 const read_fetch = apiUrl + '/';
 
 // Code to get city name from user
 var airport;
+var error=0;
 
 function getAirportName() {
 var cityField = document.getElementById('cityField').value;
@@ -183,7 +103,7 @@ if (dictionary == 0){
     const pText = document.createTextNode("City not found.");
     textDiv.appendChild(p);
     p.appendChild(pText);
-
+    error = 1;
 }
 
 // Code to search for the user input city in the API response and fetch latitude and longitude for it
@@ -217,15 +137,14 @@ if (dictionary == 0){
 airport = response.items[0].name
 var num = 0
 
-for (let i = 0; i < airport.length; i++){
-    if (airport[i] == ","){
-        num += 2
-        break
-    }
-    num += 1
-}
-
-airport = airport.slice(num)
+// for (let i = 0; i < airport.length; i++){
+//     if (airport[i] == ","){
+//         num += 2
+//         break
+//     }
+//     num += 1
+// }
+// airport = airport.slice(num)
 
 // Code to extract airport name and print on the webpage
             if (latitude != 0){
@@ -236,6 +155,7 @@ airport = airport.slice(num)
 
                 // textDiv.appendChild(p);
                 p.appendChild(pText);
+                create_entry(cityField, airport);
             }
             
             })
@@ -247,14 +167,17 @@ airport = airport.slice(num)
 var subButton = document.getElementById('subButton');
 subButton.addEventListener('click', getAirportName, false); 
 
-// document.getElementById('airportField').innerHTML = airport;
+document.getElementById(airport).innerHTML = 'airportField';
+
 read_entries();
-create_entry();
+
+
 // Function to post an entry into the database
 
-function create_entry(){
+function create_entry(cityName, airportName){
   const body = {
-      city: document.getElementById('cityField').value,
+      city: cityName,
+      airport: airportName
 //      airportField: document.getElementById('airportField').value
   };
   const requestOptions = {
@@ -269,7 +192,7 @@ function create_entry(){
 
 // URL for Create API
 // Fetch API call to the database to create a new entry
-//  var url = "http://10.0.0.34:8012/api/airport/";
+ //  var create_fetch = "http://10.0.0.34:8012/api/airport/create";
   var create_fetch = "https://farmersflask.duckdns.org/api/airport/create"
   fetch(create_fetch, requestOptions)
     .then(response => {
