@@ -167,6 +167,10 @@ var num = 0
                 p.appendChild(pText);
                 create_entry(cityField, airport);
             }
+            else
+            {
+              error = 0;
+            }
             
             })
         .catch(err => console.error(err));
