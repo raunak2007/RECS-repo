@@ -55,7 +55,9 @@
 </div>
 </form>
 
-<div id="text"></div>
+<div id="text">
+  <p id = "resultText"> </p>
+</div>
 
 <div>
     <p id='result'></p></div>
@@ -110,9 +112,11 @@ for (let i = 0; i < response.length; i++){
 }
 
 if (dictionary == 0){
+    document.getElementById("resultText").remove();
     const textDiv = document.getElementById('text');    
     const p = document.createElement('P');
     const pText = document.createTextNode("City not found.");
+    p.id = "resultText";
     textDiv.appendChild(p);
     p.appendChild(pText);
     error = 1;
@@ -125,6 +129,8 @@ if (dictionary == 0){
 
         url = 'https://aerodatabox.p.rapidapi.com/airports/search/location/' + latitude + '/' + longitude + '/km/50/16?withFlightInfoOnly=false'
 
+        document.getElementById("resultText").remove()
+
         const textDiv = document.getElementById('text');
         
         const p = document.createElement('P');
@@ -132,6 +138,7 @@ if (dictionary == 0){
 
         textDiv.appendChild(p);
         p.appendChild(pText);
+        p.id = "resultText"
 
         const aerodataboxOptions = {
             method: 'GET',
@@ -193,7 +200,6 @@ function create_entry(cityName, airportName){
   };
   const requestOptions = {
       method: 'POST',
-      mode: 'no-cors',
       body: JSON.stringify(body),
       headers: {
           "content-type": "application/json",
