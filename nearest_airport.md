@@ -1,10 +1,12 @@
 <!-- Description : -->
 
-<style>
+<head>
+    <link rel="stylesheet" href="famousdestinations.css">
+</head>
+
+<!-- <style>
     <head>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-
-    /*Make sure to make maps centered to h2, but can make h1 left indent*/
     h1 {
         color: blue;
         margin-bottom: 60px;
@@ -26,7 +28,7 @@
 
   </head>
 
-</style>
+</style> -->
 
 <h1 style="text-align:center">Database Entries</h1>
 
@@ -190,7 +192,6 @@ var num = 0
 var subButton = document.getElementById('subButton');
 subButton.addEventListener('click', getAirportName, false); 
 
-
 // Function to post an entry into the database
 
 function create_entry(cityName, airportName){
@@ -278,15 +279,44 @@ function add_row(data) {
   resultContainer.appendChild(tr);
 }
 
+function delete_entry(cityName) {
 
-function delete_entry() {
+  city_id = 0;
+
+  // prepare fetch options
+  const read_options = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default',
+    credentials: 'omit',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+  // fetch the data from API
+  fetch(read_fetch, read_options)
+    .then(response => {
+      // valid response will have json data
+      response.json().then(data => {
+          console.log(data);
+          for (let row in data) {
+            if (data[row].city == cityName)
+            {
+              city_id = data[row].id;
+            }
+          }
+      })
+  })
+
+  if ( city_id == 0 )
+    return;
+
   // prepare fetch options
   const body = {
-      city: cityName
+      id: city_id
   };  
   const delete_options = {
-    method: 'DELETE',
-    mode: 'cors',
+    method: 'POST',
     cache: 'default',
     credentials: 'omit',
     body: JSON.stringify(body),
@@ -298,11 +328,6 @@ function delete_entry() {
   fetch(delete_fetch, delete_options)
     .then(response => {
       // check for response errors
-      if (response.status !== 200) {
-          const errorMsg = 'Database read error: ' + response.status;
-          console.log(errorMsg);
-          return;
-      }
       // response contains valid result
       response.json().then(data => {
           console.log(data);
@@ -312,7 +337,7 @@ function delete_entry() {
   .catch(err => {
     console.error(err);
   });
-  // Update the display with entry deleted
+  // Update the display after entry is deleted
   read_entries();
 }
 
