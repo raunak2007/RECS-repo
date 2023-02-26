@@ -1,7 +1,7 @@
 <!-- Description : -->
 
 <head>
-    <link rel="stylesheet" href="famousdestinations.css">
+    <link rel="stylesheet" href="nearest_airport.css">
 </head>
 
 <!-- <style>
@@ -44,6 +44,9 @@
   </tbody>
 </table>
 
+<!-- <h4>Title</h4>
+      <textarea id="post-title" class="textarea-title"></textarea>  -->
+
 <h1 style="text-align:center">Create New Entry</h1>
 
 <div id='content'>
@@ -65,13 +68,27 @@
     <p id='result'></p></div>
 </div>
 
+<h1 style="text-align:center">Delete an Entry</h1>
+
+<div id='content'>
+<form id='deleteForm'>
+<div class='form-uname'>
+    <label id='deleteLabel' for='deleteField'>Input the City for the Entry you want to Delete:</label>
+    <input id='deleteField' type='text' maxlength='25'>
+</div>
+<div class='form-sub'>
+    <button id='deleteButton' type='button' onclick = 'delete_entry()'>Delete!</button>
+</div>
+</form>
+
 <script type="text/javascript">
 
 // prepare HTML result container for new output
 const resultContainer = document.getElementById("result");
 
 // prepare HTML result container for new output
-const apiUrl = "https://farmersflask.duckdns.org/api/airport";
+// const apiUrl = "https://farmersflask.duckdns.org/api/airport";
+const apiUrl = "http://10.0.0.34:8012/api/airport";
 const create_fetch = apiUrl + '/create';
 const read_fetch = apiUrl + '/';
 const delete_fetch = apiUrl + '/delete';
@@ -192,6 +209,7 @@ var num = 0
 var subButton = document.getElementById('subButton');
 subButton.addEventListener('click', getAirportName, false); 
 
+
 // Function to post an entry into the database
 
 function create_entry(cityName, airportName){
@@ -279,44 +297,17 @@ function add_row(data) {
   resultContainer.appendChild(tr);
 }
 
-function delete_entry(cityName) {
+function delete_entry() {
+  var deleteField = document.getElementById('deleteField').value;
 
-  city_id = 0;
-
-  // prepare fetch options
-  const read_options = {
-    method: 'GET',
-    mode: 'cors',
-    cache: 'default',
-    credentials: 'omit',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-  };
-  // fetch the data from API
-  fetch(read_fetch, read_options)
-    .then(response => {
-      // valid response will have json data
-      response.json().then(data => {
-          console.log(data);
-          for (let row in data) {
-            if (data[row].city == cityName)
-            {
-              city_id = data[row].id;
-            }
-          }
-      })
-  })
-
-  if ( city_id == 0 )
-    return;
+  console.log(deleteField)
 
   // prepare fetch options
   const body = {
-      id: city_id
-  };  
+      city: deleteField,
+  };
   const delete_options = {
-    method: 'POST',
+    method: 'DELETE',
     cache: 'default',
     credentials: 'omit',
     body: JSON.stringify(body),
