@@ -87,8 +87,7 @@
 const resultContainer = document.getElementById("result");
 
 // prepare HTML result container for new output
-// const apiUrl = "https://farmersflask.duckdns.org/api/airport";
-const apiUrl = "http://10.0.0.34:8012/api/airport";
+const apiUrl = "https://farmersflask.duckdns.org/api/airport";
 const create_fetch = apiUrl + '/create';
 const read_fetch = apiUrl + '/';
 const delete_fetch = apiUrl + '/delete';
