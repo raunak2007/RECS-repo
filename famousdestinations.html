@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="famousdestinations.css">
 </head>
 <body>
+  <!--Holds nav bar; mostly for css-->
   <div class="nav">
 		<a class="link1" href="/RECS-repo/" title="Link 1"><span class="text">Link 1</span></a>
 		<a class="link2" href="https://raunak2007.github.io/RECS-repo/mapsapi" title="Link 2"><span class="text">Link 2</span></a>
@@ -9,18 +10,20 @@
 		<a class="link4" href="/RECS-repo/famousdestinations.html" title="Link 4"><span class="text">Link 4</span></a>
 		<a class="link5" href="/RECS-repo/nearest_airport" title="Link 5"><span class="text">Link 5</span></a>
   </div>
-    <h1>Destinations around the world - Colin Feature<h1></h1>
-    <h2>Create a Post</h2>
-    <form id="post-form">
-      <h4>Title</h4>
-      <textarea id="post-title" class="textarea-title"></textarea> 
-      <h4>Text Content</h4>
-      <textarea id="post-text" class="textarea-text"></textarea> <br>
-      <button type="submit">Add Post</button>
-    </form>
-    <h2>Posts</h2>
-    <div id="posts"></div>
 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="famousdestinations.js"></script>
+  <h1>Destinations around the world - Colin Feature<h1></h1>
+  <h2>Create a Post</h2>
+  <form id="post-form">
+    <h4>Title</h4>
+    <textarea id="post-title" class="textarea-title"></textarea> 
+    <h4>Text Content</h4>
+    <textarea id="post-text" class="textarea-text"></textarea> <br>
+    <!--Triggers the creation of a post-->
+    <button type="submit">Add Post</button>
+  </form>
+  <h2>Posts</h2>
+  <!--Empty object for jquery to fill-->
+  <div id="posts"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="famousdestinations.js"></script>

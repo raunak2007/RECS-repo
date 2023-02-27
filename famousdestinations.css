@@ -88,6 +88,7 @@ button:hover {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color: #4f4f4f2f;
   border-radius: 8px;
@@ -187,7 +188,7 @@ button:hover {
   color:rgb(0, 0, 0);
 }
 
-
+/*Due to this being html and not markdown I had to copy the nav bar code here as well*/
 
 .bigimage {
   margin: 50px;

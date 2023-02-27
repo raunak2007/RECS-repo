@@ -1,36 +1,67 @@
 $(document).ready(function() {
+  // Function to get all posts from API
   getPosts();
+  
+  // Function to add post HTML to the page
   function addPost(post) {
-    var likes = post.likes;
     var postHTML = 
-      '<div class="container" id="post-' + post.id + '">' + /*
-        '<div class="image-column">' +
-          '<div class="img-cropped" id="img-post-' + post.id + '"></div>' +
-          '<div class="likes-row">' +
-            '<div class="like-button" data-liked="' + post.liked + '"></div>' +
-            '<div class="dislike-button"></div>' +
-            '<div class="text-likes">' + likes + ' Likes</div>' +
-            '<div class="report-button"></div>' +
-          '</div>' +
-        '</div>' + */
+      '<div class="container" id="' + post.id + '">' + 
         '<div class="text-column">' +
           '<div class="text-subtitle">' + post.title + '</div>' +
           '<div class="text-description">' + post.text + '</div>' +
         '</div>' +
+        '<div class="likes-row">' +
+          '<div class="like-button" data-liked="' + post.liked + '"></div>' +
+          '<div class="dislike-button"></div>' +
+          '<div class="text-likes">' + post.imageURL + ' Likes</div>' +
+          '<div class="report-button"></div>' + 
+        '</div>' + 
       '</div>';
     $("#posts").append(postHTML);
-    /*$(".like-button").last().click(function() {
-      likes++;
-      $(this).siblings(".text-likes").text(likes + " Likes");
+    $(".like-button").last().click(function() {
+      // Function to like a post
+      like($(this).parents(".container").attr("id"), 1);
     });
     $(".dislike-button").last().click(function() {
-      likes--;
-      $(this).siblings(".text-likes").text(likes + " Likes");
-    });*/
+      // Function to dislike a post
+      like($(this).parents(".container").attr("id"), -1);
+    });
+    $(".report-button").last().click(function() {
+      // Function to delete a post
+      remove($(this).parents(".container").attr("id"));
+    });
   }
 
+  // Function to delete a post
+  function remove(id) {
+    var url = "https://farmersflask.duckdns.org/api/fd/delete?id=" + id;
+    fetch(url, {
+    method: "DELETE"
+    })
+    .then((response) => response.json())
+    location.reload();
+  }
+
+  // Function to like a post
+  function like(id, likeChange) {
+    var url = "https://farmersflask.duckdns.org/api/fd/update?id=" + id;
+    fetch(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      imageURL: likeChange
+    })
+    })
+    .then((response) => response.json())
+
+    location.reload();
+  }
+
+  // Function to get all posts from API
   function getPosts() {
-    var url = "http://127.0.0.1:8012/api/fd";
+    var url = "https://farmersflask.duckdns.org/api/fd";
     let request = new XMLHttpRequest();
     request.open("GET", url);
     request.send();
@@ -45,17 +76,22 @@ $(document).ready(function() {
       }
     };
   }
+  
+  // Function to send post to API
   $("#post-form").submit(function(e) {
     e.preventDefault();
     sendPost();
+    location.reload();
   });
 
   function sendPost() {
+    // Get post title and text from form
     var title = $("#post-title").val();
     var text = $("#post-text").val();
-  
+    
+    /* Commented out OpenAI code
     //Get image
-    /*fetch('https://api.openai.com/v1/images/generations', {
+    fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +111,7 @@ $(document).ready(function() {
         var imageURL = data.data[0].url;*/
 
         // Send all data
-  var url = "http://127.0.0.1:8012/api/fd/post";
+  var url = "https://farmersflask.duckdns.org/api/fd/post";
   fetch(url, {
     method: "POST",
     headers: {
@@ -84,7 +120,7 @@ $(document).ready(function() {
     body: JSON.stringify({
       title: title,
       text: text,
-      imageURL: "temp"
+      imageURL: 0
     })
      })
     .then((response) => response.json())
