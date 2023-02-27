@@ -1,3 +1,13 @@
+// prepare HTML result container for new output
+const resultContainer = document.getElementById("result");
+
+// prepare HTML result container for new output
+const apiUrl = "https://farmersflask.duckdns.org/api/maps";
+const create_fetch = apiUrl + '/create';
+const read_fetch = apiUrl + '/';
+const delete_fetch = apiUrl + '/delete';
+
+
 $(document).ready(function() {
   getPosts();
   function addPost(post) {
