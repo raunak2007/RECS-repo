@@ -68,7 +68,7 @@
     <p id='result'></p></div>
 </div>
 
-<h1 style="text-align:center">Delete an Entry</h1>
+<!-- <h1 style="text-align:center">Delete an Entry</h1>
 
 <div id='content'>
 <form id='deleteForm'>
@@ -79,7 +79,7 @@
 <div class='form-sub'>
     <button id='deleteButton' type='button' onclick = 'delete_entry()'>Delete!</button>
 </div>
-</form>
+</form> -->
 
 <script type="text/javascript">
 
