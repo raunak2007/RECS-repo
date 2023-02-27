@@ -1,45 +1,9 @@
-## The Reunion Project
+## RECS Flights Group Project
 
-https://raunak2007.github.io/RECS-repo/
+A group project for AP Computer Science Principals, [hosted here](https://raunak2007.github.io/RECS-repo/). It is a collection of four features related to travel, one created by each group member. The main emphasis of this project is to learn about databases and APIs; [the backend is also on github](https://github.com/EdwinKuttappi/farmersflask), but may go down when schools AWS server is not running.
 
-Usage
+### [Destinations around the world - Colin Weis's feature](https://raunak2007.github.io/RECS-repo/famousdestinations.html)
 
-1. Midnight Theme. Use the GitHub Pages [Midnight Theme](https://github.com/pages-themes/midnight/blob/master/README.md) as a resource.  This project started with customization of _layouts/default.html from the Midnight Theme.  If you wanted to use a different [GitHub Pages Themes](https://pages.github.com/themes/), you would similarly change `_layouts/default.html` from repo used to support that theme.  Observe comment at top of _layouts/default.html ...
+![Picture of site running on localhost](https://user-images.githubusercontent.com/48264249/221648583-cb1a8f0f-e9b6-49a2-92af-7f8a1e2508f9.jpeg)
 
-```html
-<!-- 
-  _layouts/default.html
-  customization to original Midnight theme 
-  found through GitHub Pages Themes
- -->
-```
-
-2. Preview Site (Option A) - [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll).  This instruction provides instructions for ruby `Gemfile`,`bundle install`.  As an addition add `.gitignore` to avoid seeing build files in commit.   After pre-requisites run this command to obtain prompt for web server ...
-
-```bash
-bundle exec jekyll serve -H 0.0.0.0 -P 4001 # -H and -P are optional
-```
-
-3. Preview Site (Option B) - [GitHub Pages Ruby Gem](https://github.com/github/pages-gem) has additional information on making a local server.  Ruby requirements are the same: `Gemfile`,`bundle install`.   This README looks like basis of FastPages `make server` as it uses Docker and shows how to setup a `Makefile`.
-
-4. Customizing style (CSS).  This project uses `/assets/css/style.scss` as the location to customize your CSS. To avoid warnings in VSCode make sure you install `SCSS IntelliSense` plugin.  To understand default style, make sure you ***Preview Site*** and refer to build generated `_site/assets/css/style.css` (this is worth 1000 lectures).  For the reunion site `gallery.md` uses custom style from `assets/css/style.css` to support 3 images per row.  Observe file and position of import and custom CSS, order is important as clarified in Midnight Theme readme. ...
-
-```css
----
----
-
-@import "{{ site.theme }}";
-
-/* "row style" is flexible size and aligns pictures in center */
-.row {
-    align-items: center;
-    display: flex;
-  }
-  
-  /* "column style" is one-third of the width with padding */
-  .column {
-    flex: 33.33%;
-    padding: 5px;
-  }
-```
-
+You can upload a title and text to the database. Everytime the page is reset the post (and like count) are read from the API. You may click the like/dislike buttons to change the like post and the flag to remove a post. 
