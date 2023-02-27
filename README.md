@@ -6,4 +6,4 @@ A group project for AP Computer Science Principals, [hosted here](https://raunak
 
 ![Picture of site running on localhost](https://user-images.githubusercontent.com/48264249/221648583-cb1a8f0f-e9b6-49a2-92af-7f8a1e2508f9.jpeg)
 
-You can upload a title and text to the database. Everytime the page is reset the post (and like count) are read from the API. Next, the frontend uses JavaScript and JQuery to create each post in HTML. You may click the like/dislike buttons to change the like post and the flag to remove a post from the database.
+You can upload a title and text to the database. Everytime the page is reset the post (and like count) are read from the API. Next, the frontend uses JavaScript and JQuery to create each post in HTML. You may click the like/dislike buttons to change the like cpint and the flag to remove a post from the database.
