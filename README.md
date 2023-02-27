@@ -1,6 +1,6 @@
 ## RECS Flights Group Project
 
-A group project for AP Computer Science Principals, [hosted here](https://raunak2007.github.io/RECS-repo/). It is a collection of four features related to travel, one created by each group member. The main emphasis of this project is to learn about databases and APIs; [the backend is also on github](https://github.com/EdwinKuttappi/farmersflask), but may go down when schools AWS server is not running.
+A group project for AP Computer Science Principals, [hosted here](https://raunak2007.github.io/RECS-repo/). It is a collection of four features related to travel, one created by each group member. The main emphasis of this project is to learn about databases and APIs; [the backend is also on github](https://github.com/EdwinKuttappi/farmersflask), but may go down when the school AWS server is not running.
 
 ### [Destinations around the world - Colin Weis's feature](https://raunak2007.github.io/RECS-repo/famousdestinations.html)
 
