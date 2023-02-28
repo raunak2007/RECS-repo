@@ -81,25 +81,15 @@ fetch('https://forward-reverse-geocoding.p.rapidapi.com/v1/forward?street=34%20W
 	airport = response.items[0].name
 	var num = 0
 	
-	// for (let i = 0; i < airport.length; i++){
-	//     if (airport[i] == ","){
-	//         num += 2
-	//         break
-	//     }
-	//     num += 1
-	// }
-	// airport = airport.slice(num)
-	
-	// Code to extract airport name and print on the webpage
 				if (error == 0){
 					const textDiv = document.getElementById('text');
 				
-					// const p = document.createElement('P');
+					// create.element and then grab element to text
 					const pText = document.createTextNode("Nearest Airport to " + cityField + ": " + airport);
 	
-					// textDiv.appendChild(p);
+					// append element and make next nearest airport
 					p.appendChild(pText);
-					create_entry(cityField, airport);
+					create_entry(cityField, location2);
 				}
 				else
 				{
@@ -113,15 +103,14 @@ fetch('https://forward-reverse-geocoding.p.rapidapi.com/v1/forward?street=34%20W
 	}
 	
 	var subButton = document.getElementById('subButton');
-	subButton.addEventListener('click', getAirportName, false); 
-	
+	subButton.addEventListener('click', getlocationcoord2, false); 
 	
 	// Function to post an entry into the database
 	
-	function create_entry(cityName, airportName){
+	function create_entry(locationcoord1, locationcoord2){
 	  const body = {
-		  city: cityName,
-		  airport: airportName
+		  location1: locationcoord1,
+		  location2: locationcoord2
 	  };
 	  const requestOptions = {
 		  method: 'POST',
@@ -137,22 +126,22 @@ fetch('https://forward-reverse-geocoding.p.rapidapi.com/v1/forward?street=34%20W
 	
 	fetch(create_fetch, requestOptions)
 		.then(response => {
-		  // trap error response from Web API
+		  // check and test the response status, if doesn't work result in error
 		  if (response.status !== 200) {
 			const errorMsg = 'Database create error: ' + response.status;
 			console.log(errorMsg);
 			return;
 		  }
-		  // response contains valid result
+		  // console log and show above tab
 		  response.json().then(data => {
 			  console.log(data);
-			  //add a table row for the new city and airport
+			  //add a table row for each coordinates
 			  add_row(data);
 		  })
 	  })
 	}
 	
-	// Display city-airport table, data is fetched from Backend Database
+	// read entries functions which will use GET method
 	function read_entries() {
 	  // prepare fetch options
 	  const read_options = {
@@ -167,13 +156,13 @@ fetch('https://forward-reverse-geocoding.p.rapidapi.com/v1/forward?street=34%20W
 	  // fetch the data from API
 	  fetch(read_fetch, read_options)
 		.then(response => {
-		  // check for response errors
+		  // console log and shows the message at top of the tab
 		  if (response.status !== 200) {
 			  const errorMsg = 'Database read error: ' + response.status;
 			  console.log(errorMsg);
 			  return;
 		  }
-		  // valid response will have json data
+		  // using for loop in the row and make a table
 		  response.json().then(data => {
 			  console.log(data);
 			  for (let row in data) {
@@ -210,7 +199,7 @@ fetch('https://forward-reverse-geocoding.p.rapidapi.com/v1/forward?street=34%20W
 	
 	  // prepare fetch options
 	  const body = {
-		  location1: deleteField,
+		  location1: deleteField, // delete field
 	  };
 	  const delete_options = {
 		method: 'DELETE',
