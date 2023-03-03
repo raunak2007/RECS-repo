@@ -17,7 +17,7 @@
   <div id="mymap"></div>
   <script type="text/javascript">
     var myrapidkey="8d786c8035msh5ba0e19d2bd688ap10b377jsnd845f2afcfac";
-    var map = L.map('mymap').setView([40.6429,-73.7858], 12);  
+    var map = L.map('mymap').setView([33.01486344623916, -117.12189092699693], 12);  
       L.tileLayer('https://maptiles.p.rapidapi.com/en/map/v1/{z}/{x}/{y}.png?rapidapi-key='+myrapidkey, {          
         maxZoom: 19,
         attribution: '&copy; <a href="https://rapidapi.com/GeocodeSupport/api/forward-reverse-geocoding" target="_blank">Forward & Reverse Geocoding API</a> | &copy; <a href="https://www.maptilesapi.com" target="_blank">MapTiles API</a> | &copy; <a href="https://openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
